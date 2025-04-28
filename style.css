@@ -6,6 +6,15 @@ button {
     font-style: bold;
     font-size: 1em;
 }
+/* #region Dialog */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.3em;
+}
+/* #endregion */
 caption {
     font-size: 1.5em;
     font-weight: bold;
@@ -14,6 +23,10 @@ caption {
 thead,tr,th {
     vertical-align: top;
     text-align: left;
+}
+td:nth-last-child(n+2) {
+    vertical-align: baseline;
+    padding: 1.3rem 0;
 }
 thead tr{
     height: 1em;

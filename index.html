@@ -8,7 +8,20 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <button>Add Book</button>
+    <dialog>
+        <form method="dialog">
+            <label for="Author">Author</label>
+            <input name="Author" id="Author" type="text" class="StringInput" pattern="[a-zA-Z0-9]+" required>
+            <label for="Title">Title</label>
+            <input name="Title" id="Title" type="text" class="StringInput" pattern="[a-zA-Z0-9]+" required>
+            <label for="FinishedReading">FinishedReading</label>
+            <input name="Finished" id="FinishedReading" type="checkbox" class="BooleanInput">
+            <label for="PageCount">Page Count</label>
+            <input name="PageCount" id="PageCount" type="number" style="align-self: stretch;" max="10000" min="1" class="NumberInput" required>
+            <button value="confirm" id="submit-dialog">Add</button>
+        </form>
+    </dialog>
+    <button id="open-dialog">Add Book</button>
     <div class="table-container">
         <table>
             <caption>Library Books</caption>
