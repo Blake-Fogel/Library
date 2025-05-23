@@ -32,15 +32,14 @@ numberInput.addEventListener('input', (event) => {
 document.querySelector('body > button').addEventListener('click',() => {
     document.querySelector('dialog').showModal();
 });
-function Book(author,title,finishedReading,pageAmount) {
-    if (!new.target) {
-        throw Error("this is a constructor");
+class Book {
+    constructor(author,title,finishedReading,pageAmount) {
+        this.author = author;
+        this.title = title;
+        this.finishedReading = finishedReading;
+        this.pageAmount = pageAmount;
+        this.id = crypto.randomUUID();
     }
-    this.author = author;
-    this.title = title;
-    this.finishedReading = finishedReading;
-    this.pageAmount = pageAmount;
-    this.id = crypto.randomUUID();
 }
 
 function addBookToLibrary(author,title,finishedReading,pageAmount) {
